@@ -1,0 +1,1872 @@
+//WAP to perform basic input output of all programs
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    char b;
+    float c;
+    
+    printf("Enter the integer: ");
+    scanf("%d",&a);
+    printf("Enter the character: ");
+    scanf("\n%c",&b);
+    printf("Enter the float: ");
+    scanf("%f",&c);
+    printf("Integer: %d\nCharacter: %c\nFloat: %f",a,b,c);
+
+    return 0;
+}
+
+//WAP to input two numbers and find their sum
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the integers: ");
+    scanf("%d%d",&a,&b);
+    printf("%d + %d = %d",a,b,a+b);
+
+    return 0;
+}
+
+//WAP to input two numbers and perform all basic arithmatic operations
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the integers: ");
+    scanf("%d%d",&a,&b);
+    printf("%d + %d = %d",a,b,a+b);
+    printf("\n%d - %d = %d",a,b,a-b);
+    printf("\n%d x %d = %d",a,b,a*b);
+    printf("\n%d / %d = %d",a,b,a/b);
+
+    return 0;
+}
+
+//WAP to input length and breadth of a rectangle and find its perimeter
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the dimensions: ");
+    scanf("%d%d",&a,&b);
+    printf("Perimeter: %d units",2*(a+b));
+
+    return 0;
+}
+
+//WAP to input length and breadth of a rectangle and find its area
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the dimensions: ");
+    scanf("%d%d",&a,&b);
+    printf("Area: %d square units",a*b);
+
+    return 0;
+}
+
+//WAP to input radius of a circle and find its diameter, circumference and area
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the radius: ");
+    scanf("%d",&a);
+    printf("Diameter: %d units",a*2);
+    printf("\nCircumference: %g units", (float)a*2*3.14);
+    printf("\nArea: %g square units", (float)a*a*3.14);
+
+    return 0;
+}
+
+//WAP to input length in centimeter and convert it into meters and kilometers
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the length (in cm): ");
+    scanf("%d",&a);
+    if (a%1000==0)
+        printf("The distance equates to %d km",a/1000);
+    else if (a/1000==0)
+        printf("The distance equates to %d m",a%1000);
+    else
+        printf("The distance equates to %d km and %d m",a/1000,a%1000);
+
+    return 0;
+}
+
+//WAP to input temperature in celcius and convert it into fahrenheit
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the temperature (in Celcius): ");
+    scanf("%d",&a);
+    printf("The temperature equates to %g Fahrenheit",(float)(a*9/5)+32);
+
+    return 0;
+}
+
+//WAP to input temperature in fahrenheit and convert it into celcius
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the temperature (in Fahrenheit): ");
+    scanf("%d",&a);
+    printf("The temperature equates to %g Celcius",(float)(a-32)*5/9);
+
+    return 0;
+}
+
+//WAP to input days and convert it into years, weeks and days
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number of days: ");
+    scanf("%d",&a);
+    printf("%d day(s) equal %d year(s), %d week(s) and %d day(s)",a, a/365,(a%365)/7,((a%365)%7));
+
+    return 0;
+}
+
+//WAP to find power of any number x ^ y
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the numbers: ");
+    scanf("%d%d",&a,&b);
+    printf("%d ^ %d = %d",a, b, (int)pow(a,b));
+
+    return 0;
+}
+
+//WAP to input any number and calculate its square root
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    printf("Square root of %d is %d", a, (int)sqrt(a));
+
+    return 0;
+}
+
+//WAP to input two angles of a triangle and find the third angle
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the two angles: ");
+    scanf("%d%d",&a,&b);
+    if (a+b<180)
+        printf("The third angle is %d degrees", 180-a-b);
+    else
+        printf("A triangle with two angles %d and %d does not exist",a,b);
+
+    return 0;
+}
+
+//WAP to input base and height of a triangle and find its area
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the base and height: ");
+    scanf("%d%d",&a,&b);
+    printf("The area is %g square units", (float)a*b*1/2);
+
+    return 0;
+}
+
+
+//WAP to find the area of an equilateral triangle
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the side of the equilateral triangle: ");
+    scanf("%d",&a);
+    printf("The area is %g square units", (float)a*a/4*sqrt(3));
+
+    return 0;
+}
+
+//WAP to input marks of five subjects and find the total, average and percentage
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the marks: ");
+    scanf("%d",&a);
+    for (int i = 0; i < 4; i++)
+    {
+        scanf("%d",&b);
+        a+=b;
+    }
+    printf("Enter the maximum marks of induvidual instances: ");
+    scanf("%d",&b);
+    printf("Total: %d, Average: %g, Percentage: %g",a,(float)a/5,(float)100*a/(b*5));
+
+    return 0;
+}
+
+//WAP to input principal, time and interest and calculate simple interest
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the principal: ");
+    scanf("%d",&a);
+    printf("Enter the time: ");
+    scanf("%d",&b);
+    a*=b;
+    printf("Enter the interest: ");
+    scanf("%d",&b);
+    a*=b;
+    
+    printf("Simple Interest: %d",a/100);
+
+    return 0;
+}
+
+//WAP to input principal, time and interest and calculate compound interest
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b,c;
+    
+    printf("Enter the principal: ");
+    scanf("%d",&a);
+    printf("Enter the time: ");
+    scanf("%d",&b);
+    printf("Enter the interest: ");
+    scanf("%d",&c);
+    
+    printf("Compound Interest: %g",(float)a*pow((1+(float)c/100),b)-a);
+
+    return 0;
+}
+
+//WAP to find maximum between two numbers using conditional operator
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the two numbers: ");
+    scanf("%d%d",&a,&b);
+    
+    a>b? printf("%d is greater",a): a<b? printf("%d is greater",b): printf("Both are equal");
+
+    return 0;
+}
+
+//WAP to find maximum between three numbers using conditional operator
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    
+    printf("Enter the three numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+    
+    a>b&&a>c? printf("%d is the greatest",a): b>a&&b>c? printf("%d is the greatest",b): c>a&&c>b? printf("%d is the greatest",c): a==b&&a>c? printf("First and Second numbers are equal and the greater"): b==c&&b>a? printf("Second and third numbers are equal and the greater"): c==a&&c>b? printf("First and third numbers are equal and the greater"): printf("All are equal");
+
+    return 0;
+}
+
+//WAP to check wheather a number is even or odd using conditional operators
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    a%2==0? printf("Even"): printf("Odd");
+    
+    return 0;
+}
+
+//WAP to check wheather an year is leap year or not using conditional operators
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the year: ");
+    scanf("%d",&a);
+    
+    (a%400==0)||(a%4==0&&a%100!=0)? printf("Leap year"): printf("Not a leap year");
+    
+    return 0;
+}
+
+//WAP to check wheather character is an alphabet or not
+
+#include <stdio.h>
+
+int main()
+{
+    char a;
+    
+    printf("Enter the character: ");
+    scanf("%c",&a);
+    
+    (a>64&&a<91)||(a>96&&a<123)? printf("Alphabet"): printf("Not an alphabet");
+    
+    return 0;
+}
+
+//WAP to find maximum between two numbers using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the numbers: ");
+    scanf("%d%d",&a,&b);
+    
+    if (a>b)
+        printf ("%d is greater",a);
+    else if (b>a)
+        printf ("%d is greater",b);
+    else
+        printf ("Both are equal");
+    
+    return 0;
+}
+
+//WAP to find maximum between three numbers using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    
+    printf("Enter the numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+    
+    if (a>b&&a>c)
+        printf ("%d is the greatest",a);
+    else if (b>a&&b>c)
+        printf ("%d is the greatest",b);
+    else if (c>a&&c>b)
+        printf ("%d is the greatest",c);
+    else if (a==b&&a>c)
+        printf ("First and second numbers are equal and greater than the third");
+    else if (c==b&&b>a)
+        printf ("Second and third numbers are equal and greater than the third");
+    else if (c==a&&a>b)
+        printf ("First and third numbers are equal and greater than the third");
+    else
+        printf ("All are equal");
+    
+    return 0;
+}
+
+//WAP to check if a number is positive, negative or zero using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    if (a>0)
+        printf("Positive");
+    else if (a<0)
+        printf("Negative");
+    else
+        printf("Zero");
+    
+    return 0;
+}
+
+//WAP to check if a number is divisible by 5 and 11 or not using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    if (a%55==0)
+        printf("Divisible");
+    else
+        printf("Not Divisible");
+    
+    return 0;
+}
+
+//WAP to check if an year is a leap year or not using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    
+    printf("Enter the year: ");
+    scanf("%d",&a);
+    
+    if ((a%4==0&&a%100!=0)||a%400==0)
+        printf("Leap year");
+    else
+        printf("Not a leap year");
+    
+    return 0;
+}
+
+//WAP to check if a character is alphabet or not using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    char a;  
+    
+    printf("Enter the character: ");
+    scanf("%c",&a);
+    
+    if ((a>64&&a<91)||(a>96&&a<123))
+        printf("Alphabet");
+    else
+        printf("Not an alphabet");
+    
+    return 0;
+}
+
+//WAP to input a character and check if it is a vowel or a consonant using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    char a;  
+    
+    printf("Enter the character: ");
+    scanf("%c",&a);
+    
+    if (!(a>64&&a<91)||!(a>96&&a<123))
+        printf("Not an alphabet");
+    else if (a=='a'||a=='e'||a=='i'||a=='o'||a=='u'||a=='A'||a=='E'||a=='I'||a=='O'||a=='U')
+        printf("Vowel");
+    else
+        printf("Consonant");
+    
+    return 0;
+}
+
+//WAP to check if a character is alphabet, digit or a special character using if...else
+
+#include <stdio.h>
+
+int main()
+{
+    char a;  
+    
+    printf("Enter the character: ");
+    scanf("%c",&a);
+    
+    if ((a>64&&a<91)||(a>96&&a<123))
+        printf("Alphabet");
+    else if (a>47&&a<58)
+        printf("Digit");
+    else
+        printf("Special character");
+    
+    return 0;
+}
+
+//WAP to print the day of the week using switch case
+
+#include <stdio.h>
+
+int main()
+{
+    int a;  
+    
+    printf("Enter the day in number: ");
+    scanf("%d",&a);
+    
+    switch(a)
+    {
+        case 0: printf("Sunday");
+                break;
+        case 1: printf("Monday");
+                break;
+        case 2: printf("Tuesday");
+                break;
+        case 3: printf("Wednesday");
+                break;
+        case 4: printf("Thursday");
+                break;
+        case 5: printf("Friday");
+                break;
+        case 6: printf("Saturday");
+                break;
+        default: printf("Not a valid number");
+    }
+    
+    return 0;
+}
+
+//WAP to find the number of days in a month using switch case
+
+#include <stdio.h>
+
+int main()
+{
+    int a;  
+    
+    printf("Enter the number of the month: ");
+    scanf("%d",&a);
+    
+    switch(a)
+    {
+        case 1: 
+        case 3: 
+        case 5: 
+        case 7: 
+        case 8: 
+        case 10: 
+        case 12: printf("31 days");
+                break;
+        case 2: printf("28 or 29 days");
+                break;
+        case 4:
+        case 6:
+        case 9:
+        case 11: printf("30 days");
+                break;
+        default: printf("Not a valid number");
+    }
+    
+    return 0;
+}
+
+//WAP to find the maximum of two numbers using switch case
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;  
+    
+    printf("Enter the numbers: ");
+    scanf("%d%d",&a,&b);
+    
+    switch(a==b)
+    {
+        case 1: printf("Both are equal");
+                break;
+        case 0: switch (a>b)
+                {
+                    case 1: printf ("%d is greater",a);
+                            break;
+                    case 0: printf ("%d is greater",b);
+                            break;
+                }
+    }
+    
+    return 0;
+}
+
+//WAP to find if a number is even or odd using switch case
+
+#include <stdio.h>
+
+int main()
+{
+    int a;  
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    switch(a%2)
+    {
+        case 1: printf("Odd");
+                break;
+        case 0: printf("Even");
+    }
+    
+    return 0;
+}
+
+//WAP to find if a number is positive, negative or zero using switch case
+
+#include <stdio.h>
+
+int main()
+{
+    int a;  
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    switch(a>0)
+    {
+        case 1: printf("Positive");
+                break;
+        case 0: switch (a<0)
+                {
+                    case 1: printf("Negative");
+                            break;
+                    case 0: printf("Zero");
+                }
+    }
+    
+    return 0;
+}
+
+//WAP to find roots of a quadratic equation using switch case
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b,c;  
+    
+    printf("Enter the coefficient of x^2: ");
+    scanf("%d",&a);
+    printf("Enter the coefficient of x: ");
+    scanf("%d",&b);
+    printf("Enter the constant: ");
+    scanf("%d",&c);
+    
+    switch(b*b>4*a*c)
+    {
+        case 1: printf("The two real roots are %g and %g",((float)-b+sqrt(b*b-4*a*c))/2*a,((float)-b-sqrt(b*b-4*a*c))/2*a);
+                break;
+        case 0: switch (b*b<4*a*c)
+                {
+                    case 1: printf ("The equation does not have real roots");
+                            break;
+                    case 0: printf ("The two roots are equal and equal to %g",(float)-b/2*a);
+                }
+        
+    }
+    
+    return 0;
+}
+
+//WAP to create a simple calculator using switch case
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b;
+    char c;
+    
+    printf("Enter the two numbers: ");
+    scanf("%d %c %d",&a,&c,&b);
+    
+    switch (c)
+    {
+        case '+': printf("Sum: %d", a+b);
+                break;
+        case '-': printf("Difference: %d", a-b);
+                break;
+        case 'x': printf("Product: %d", a*b);
+                break;
+        case '/': printf("Quotient: %d", a/b);
+                break;
+        case '%': printf("Remainder: %d", a%b);
+                break;
+        case '^': printf("Exponent: %g", pow(a,b));
+                break;
+        default: printf("Invalid operator");
+    }
+    
+    return 0;
+}
+
+//WAP to find the cube of a number using functions
+
+#include <stdio.h>
+
+double cube(int a)
+{
+    return (a*a*a);
+}
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    printf("Cube: %g",cube (a));
+    
+    return 0;
+}
+
+//WAP to find the diameter, circumference and area of a circle using functions
+
+#include <stdio.h>
+
+int diameter(int a)
+{
+    return (a*2);
+}
+
+double circumference(int a)
+{
+    return (a*2*3.14);
+}
+
+double area(int a)
+{
+    return (a*a*3.14);
+}
+
+int main()
+{
+    int a;
+    
+    printf("Enter the radius: ");
+    scanf("%d",&a);
+    
+    printf("Diameter: %d units\nCircumference: %g units\nArea: %g square units",diameter (a),circumference(a),area(a));
+    
+    return 0;
+}
+
+//WAP to the maximum and minimum between two numbers using functions
+
+#include <stdio.h>
+
+int max(int a,int b)
+{
+    return (a*!(b/a)+b*!(a/b));
+}
+
+int min(int a,int b)
+{
+    return (a*!!(b/a)+b*!!(a/b));
+}
+
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the numbers: ");
+    scanf("%d%d",&a,&b);
+    
+    if (a!=b)
+        printf("%d is the greatest and %d is the smallest", max(a,b), min(a,b));
+    else
+        printf("Both are equal");
+    
+    return 0;
+}
+
+//WAP to check if a number is even or odd using functions
+
+#include <stdio.h>
+
+char* even_odd(int a)
+{
+    if (a%2==0)
+        return("Even");
+    else
+        return("Odd");
+}
+
+
+
+int main()
+{
+    int a;
+    
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    
+    printf("The number is %s",even_odd(a));
+    
+    return 0;
+}
+
+//WAP to find all prime numbers between two numbers using functions
+
+#include <stdio.h>
+#include <math.h>
+
+int prime(int a)
+{
+    for (int i = 2; i < a; i++)
+    {
+        if (a%i==0)
+            {
+                return 0;
+            }
+    }
+    return 1;
+    
+}
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the numbers: ");
+    scanf("%d%d",&a,&b);
+    
+    if (b<a)
+        {
+            int temp = b;
+            b = a;
+            a = temp;
+        }
+    
+    for (int i = a; i < b; i++)
+        if (prime(i))
+            printf("%d,",i);
+    printf("\b ");
+    
+    return 0;
+}
+
+//WAP to find length of a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    int i;
+    for (i = 0; a[i]; i++);
+    
+    printf("Length of the string: %d",i);
+
+    return 0;
+}
+
+//WAP to copy one string into another
+
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    char a[100], b[100];
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++)
+        b[i] = a[i];
+    
+    printf("Copied string: %s",b);
+
+    return 0;
+}
+
+//WAP to concatenate two strings
+
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    char a[100], b[100];
+    printf("Enter the strings: ");
+    scanf("%[^\n]",a);
+    scanf("\n%[^\n]",b);
+    
+    for (i = 0; a[i]; i++);
+    for (int j = 0; b[j]; j++)
+        a[i+j] = b[j];
+    
+    printf("Concatenated string: %s",a);
+
+    return 0;
+}
+
+//WAP to compare two strings
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j,flag = 0;
+    char a[100], b[100];
+    printf("Enter the strings: ");
+    scanf("%[^\n]",a);
+    scanf("\n%[^\n]",b);
+    
+    for (i = 0; a[i]; i++);
+    for (j = 0; b[j]; j++);
+    
+    if (i == j)
+    {
+        for(i = 0; a[i]; i++)
+            if (a[i] != b[i])
+            {
+                flag = 1;
+                break;
+            }
+    }
+    else
+        flag = 1;
+    
+    if (flag == 0)
+        printf("The two strings are equal.");
+    else
+        printf("The two strings are not equal.");
+
+    return 0;
+}
+
+//WAP to convert uppercase into lowercase
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (int i = 0; a[i]; i++)
+        if (a[i]>64&&a[i]<91)
+            a[i]+=32;
+    
+    printf("%s",a);
+
+    return 0;
+}
+
+//WAP to convert lowercase into uppercase
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (int i = 0; a[i]; i++)
+        if (a[i]>96&&a[i]<123)
+            a[i]-=32;
+    
+    printf("%s",a);
+
+    return 0;
+}
+
+//WAP to toggle case
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (int i = 0; a[i]; i++)
+        {
+            if (a[i]>96&&a[i]<123)
+                a[i]-=32;
+            else if (a[i]>64&&a[i]<91)
+                a[i]+=32;
+        }
+    
+    printf("%s",a);
+
+    return 0;
+}
+
+//WAP to find total number of alphabets, digits and special characters in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int alpha, dig, spec;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (int i = 0; a[i]; i++)
+        {
+            if ((a[i]>96&&a[i]<123)||(a[i]>64&&a[i]<91))
+                alpha++;
+            else if (a[i]>47&&a[i]<58)
+                dig++;
+            else
+                spec++;
+        }
+    
+    printf("The string contains %d alphabets, %d digits and %d special characters",alpha, dig, spec);
+
+    return 0;
+}
+
+//WAP to find total number of alphabets, digits and special characters in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int vowel, consonant;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (int i = 0; a[i]; i++)
+        {
+            if (a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U')
+                vowel++;
+            else if ((a[i]>96&&a[i]<123)||(a[i]>64&&a[i]<91))
+                consonant++;
+        }
+    
+    printf("The string contains %d vowels and %d consonants",vowel, consonant);
+
+    return 0;
+}
+
+//WAP to find total number of words in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int count,flag = 1;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (int i = 0; a[i]; i++)
+        {
+            if (flag)
+                count += flag--;
+            if (a[i]==' '&&a[i+1]!=' ')
+                count++;
+        }
+    
+    printf("The string contains %d words",count);
+
+    return 0;
+}
+
+//WAP to find reverse of a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++);
+    
+    for (; i >= 0; i--)
+        printf("%c",a[i]);
+
+    return 0;
+}
+
+//WAP to check wheather a string is a palindrome or not
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i, flag = 1;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++);
+    
+    for (int j = 0; j < i/2 ; j++)
+        if (a[j] != a[i-j-1])
+            flag = 0;
+
+    if (flag == 1)
+        printf("Palindrome");
+    else
+        printf("Not a palindrome");
+    
+    return 0;
+}
+
+//WAP to reverse order of words in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b[100][100];
+    int i, j = 0, k = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++)
+        if (a[i] != ' ')
+            {
+                b[j][k] = a[i];
+                k++;
+            }
+        else
+            {
+                j++;
+                k = 0;
+            }
+            
+    for (i = j; i >=0 ; i--)
+        {
+            for (k = 0; b[i][k]; k++)
+                printf("%c", b[i][k]);
+            printf (" ");
+        }
+
+    return 0;
+}
+
+//WAP to find first occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i,flag = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character to be scanned: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]; i++)
+        if (a[i] == b)
+        {
+            flag = 1;
+            break;
+        }
+    
+    if (flag == 1)
+        printf("Character found at %dth index",i);
+    else
+        printf("Character not found in the string");
+    
+    return 0;
+}
+
+//WAP to find last occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i,j,flag = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character to be scanned: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]; i++);
+    for (j = i; j >= 0; j--)
+        if (a[j] == b)
+        {
+            flag = 1;
+            break;
+        }
+    
+    if (flag == 1)
+        printf("Character found at %dth index",j);
+    else
+        printf("Character not found in the string");
+    
+    return 0;
+}
+
+//WAP to find all occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i,j = 0,c[100] = {0},flag = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character to be scanned: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]!=0 ; i++)
+        if (a[i] == b)
+        {
+            flag = 1;
+            c[j] = i;
+            j++;
+        }
+    
+    if (flag == 1)
+        {
+            printf("Character found at the following indices: ");
+            for (int k = 0; k<j ; k++)
+                printf("%d ", c[k]);
+        }
+    else
+        printf("Character not found in the string");
+    
+    return 0;
+}
+
+//WAP to count all occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i,count=0,flag = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character to be scanned: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]!=0 ; i++)
+        if (a[i] == b)
+        {
+            flag = 1;
+            count++;
+        }
+    
+    if (flag == 1)
+        {
+            printf("Character is found %d times",count);
+        }
+    else
+        printf("Character not found in the string");
+    
+    return 0;
+}
+
+//WAP to count frequency of each character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i;
+    int b[127]={0};
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++)
+        b[a[i]]++;
+        
+    printf("The following characters were found:");
+    for (i = 0; i<=127; i++)
+        if (b[i])
+            printf("\n%c: %d",i,b[i]);
+        
+    return 0;
+}
+
+//WAP to remove all occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]; i++)
+        if (a[i] == b)
+            for (int j = i; a[j]; j++)
+                a[j] = a[j+1];
+        
+    printf("%s",a);
+    
+    return 0;
+}
+
+//WAP to remove first occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i, flag = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]; i++)
+        {
+            if (a[i] == b)
+                flag = 1;
+            if (flag == 1)
+                a[i] = a[i+1];
+        }
+        
+    printf("%s",a);
+    
+    return 0;
+}
+
+//WAP to remove last occurrence of a character in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b;
+    int i, flag = 0, index = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character: ");
+    scanf("\n%c",&b);
+    
+    for (i = 0; a[i]; i++);
+    
+    for (; i >= 0 ; i--)
+        if (a[i] == b)
+        {
+            flag = 1;
+            index = i;
+            break;
+        }
+
+    for (; a[i]; i++)
+        a[i] = a[i+1];
+            
+    printf("%s",a);
+    
+    return 0;
+}
+
+//WAP to replace first occurrence of a character with another in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b,c;
+    int i, flag = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character to replace: ");
+    scanf("\n%c",&b);
+    printf("Enter the character to be replaced: ");
+    scanf("\n%c",&c);
+    
+    for (i = 0; a[i]; i++)
+        if (a[i] == b)
+        {
+            a[i] = c;
+            break;
+        }
+        
+    printf("%s",a);
+    
+    return 0;
+}
+
+//WAP to replace last occurrence of a character with another in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100],b,c;
+    int i, index = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    printf("Enter the character to replace: ");
+    scanf("\n%c",&b);
+    printf("Enter the character to be replaced: ");
+    scanf("\n%c",&c);
+    
+    for (i = 0; a[i]; i++);
+    
+    for (; i >= 0 ; i--)
+        if (a[i] == b)
+        {
+            index = i;
+            break;
+        }
+    a[i] = c;
+            
+    printf("%s",a);
+    
+    return 0;
+}
+
+//WAP to remove all leading whitespaces in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i, count = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]==' '; i++)
+        count++;
+    
+    for (i = 0; a[i]; i++)
+        a[i] = a[i+count];
+        
+    printf("%s",a);
+        
+    return 0;
+}
+
+//WAP to remove all trailing whitespaces in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i, count = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++)
+        count++;
+        
+    for (i = count-1; a[i]==' '; i--)
+        count--;
+    
+    a[count] = 0;
+        
+    printf("%s",a);
+        
+    return 0;
+}
+
+//WAP to remove leading and trailing whitespaces in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i, count = 0;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]==' '; i++)
+        count++;
+    
+    for (i = 0; a[i]; i++)
+        a[i] = a[i+count];
+        
+    count = 0;
+        
+    for (i = 0; a[i]; i++)
+        count++;
+        
+    for (i = count-1; a[i]==' '; i--)
+        count--;
+    
+    a[count] = 0;
+        
+    printf("%s",a);
+        
+    return 0;
+}
+
+//WAP to remove all extra spaces in a string
+
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    int i;
+    printf("Enter the string: ");
+    scanf("%[^\n]",a);
+    
+    for (i = 0; a[i]; i++)
+        if (a[i] == ' ')
+            for (int j = i; a[j]; j++)
+                a[j] = a[j+1];
+        
+    printf("%s",a);
+    
+    return 0;
+}
+
+//WAP to read and print all elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    printf("The elements of the array are: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ",a[i]);
+    
+    return 0;
+}
+
+//WAP to read and print all negative elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    printf("The negative elements of the array are: ");
+    for (int i = 0; i < n; i++)
+        if (a[i] < 0)
+            printf("%d ",a[i]);
+    
+    return 0;
+}
+
+//WAP to print sum of all elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,sum = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    for (int i = 0; i < n; i++)
+            sum+=a[i];
+    
+    printf("Sum: %d",sum);
+    
+    return 0;
+}
+
+//WAP to print maximum and minimum of all elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,min, max = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    min = a[0];
+    for (int i = 0; i < n; i++)
+        {
+            if (a[i] > max)
+                max = a[i];
+            if (a[i] < min)
+                min = a[i];
+        }
+    
+    printf("Maximum: %d\nMinimum: %d",max,min);
+    
+    return 0;
+}
+
+//WAP to print second largest of all elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,max = 0, max2 = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    for (int i = 0; i < n; i++)
+        {
+            if (a[i] > max)
+                max = a[i];
+        }
+    for (int i = 0; i < n; i++)
+        {
+            if (a[i] > max2 && max > a[i])
+                max2 = a[i];
+        }
+    
+
+    
+    printf("Second largest element: %d",max2);
+    
+    return 0;
+}
+
+//WAP to count number of even and odd elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,even = 0, odd = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    for (int i = 0; i < n; i++)
+        {
+            if (a[i]%2 == 0)
+                even++;
+            else
+                odd++;
+        }
+    
+    printf("Even: %d\nOdd: %d",even,odd);
+    
+    return 0;
+}
+
+//WAP to count number of negative elements of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,count = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    
+    for (int i = 0; i < n; i++)
+            if (a[i]<0)
+                count++;
+    
+    printf("Negative elements: %d",count);
+    
+    return 0;
+}
+
+//WAP to copy all elements of one array to another
+
+#include <stdio.h>
+
+int main()
+{
+    int n,count = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n],b[n];
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d",&a[i]);
+        b[i] = a[i];
+    }
+        
+    printf("The elements of the copied array are: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ",b[i]);
+    
+    return 0;
+}
+
+//WAP to insert an element into an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,count = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n],b,c;
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    printf("Enter the element to be inserted: ");
+    scanf("%d",&b);
+    printf("Enter the index where the element is to be inserted: ");
+    scanf("%d",&c);
+    
+    for (int i = c; i<n+1; i++)
+        a[i] = a[i+1];
+        
+    a[c] = b;
+        
+    printf("The modified array is: ");
+    for (int i = 0; i < n+1; i++)
+        printf("%d ",a[i]);
+    
+    return 0;
+}
+
+//WAP to delete an element from an array
+
+#include <stdio.h>
+
+int main()
+{
+    int n,count = 0;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d",&n);
+    int a[n],b;
+    
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    printf("Enter the index where the element is to be deleted from: ");
+    scanf("%d",&b);
+    
+    for (int i = b; i<n-1; i++)
+        a[i] = a[i+1];
+        
+    printf("The modified array is: ");
+    for (int i = 0; i < n-1; i++)
+        printf("%d ",a[i]);
+    
+    return 0;
+}
+
